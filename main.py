@@ -53,14 +53,13 @@ def generar_html():
             "categoria": "Productividad & Email",
             "precio": "Prueba gratuita",
             "enlace": "https://cleanemailr.pxf.io/c/7568707/1114171/5448"
-        }
+        },
         {
-            "titulo": "Flashcloud",
-            "categoria": "Cloud & Hosting",
-            "descripcion": "Soluciones de infraestructura cloud y alojamiento web de alto rendimiento para proyectos digitales y profesionales.",
-            "etiqueta": "Alta rentabilidad",
-            "enlace": "https://flashcloud.pxf.io/c/7568707/3920665/52759",
-            "texto_boton": "Probar Flashcloud"
+           "nombre": "Flashcloud",
+           "descripcion": "Soluciones de infraestructura cloud y alojamiento web de alto rendimiento para proyectos digitales y profesionales.",
+           "categoria": "Cloud & Hosting",
+           "precio": "Alta rentabilidad",
+           "enlace": "https://flashcloud.pxf.io/c/7568707/3920665/52759"
         }
         ]
 
