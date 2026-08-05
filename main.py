@@ -25,6 +25,34 @@ def generar_html():
             "categoria": "Email Marketing",
             "precio": "Plan gratuito disponible",
             "enlace": "https://shopify.pxf.io/c/7568707/2784851/13624"
+        },
+        {
+            "nombre": "DHgate",
+            "descripcion": "Plataforma global de comercio online ideal para encontrar una gran variedad de productos al por mayor y minorista.",
+            "categoria": "E-commerce & Compras",
+            "precio": "Variedad de ofertas",
+            "enlace": "https://dhgate.sjv.io/c/7568707/3997138/12108"
+        },
+        {
+            "nombre": "Preply",
+            "descripcion": "Plataforma líder para conectar con profesores particulares y aprender idiomas de forma online y flexible.",
+            "categoria": "Educación & Idiomas",
+            "precio": "Clases personalizadas",
+            "enlace": "https://preply.sjv.io/c/7568707/2135760/24422"
+        },
+        {
+            "nombre": "UPERFECT",
+            "descripcion": "Especialistas en monitores portátiles de alta calidad para teletrabajo, gaming y movilidad profesional.",
+            "categoria": "Hardware & Tecnología",
+            "precio": "Pantallas portátiles",
+            "enlace": "https://uperfect.sjv.io/c/7568707/1226538/15155"
+        },
+        {
+            "nombre": "Clean Email",
+            "descripcion": "Asistente inteligente para limpiar tu bandeja de entrada, organizar correos y cancelar suscripciones fácilmente.",
+            "categoria": "Productividad & Email",
+            "precio": "Prueba gratuita",
+            "enlace": "https://cleanemailr.pxf.io/c/7568707/1114171/5448"
         }
     ]
 
@@ -150,7 +178,7 @@ def generar_html():
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(html_content)
     
-    print("¡Página web generada con éxito en index.html!")
+    print("¡Página web generada con éxito en index.html con todas las marcas!")
 
 if __name__ == "__main__":
     generar_html()
