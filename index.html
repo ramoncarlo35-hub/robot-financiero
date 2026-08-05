@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Financiero - Directorio de Herramientas Digitales</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #0066ff, #00cc99);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 { margin: 0; font-size: 2.5em; }
+        header p { margin-top: 10px; font-size: 1.1em; opacity: 0.9; }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .tag {
+            background: #eef2ff;
+            color: #4f46e5;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+            width: fit-content;
+        }
+        .card h3 { margin: 0 0 10px 0; color: #111; }
+        .card p { color: #666; font-size: 0.95em; line-height: 1.5; }
+        .price { font-weight: bold; color: #10b981; margin: 15px 0; }
+        .btn {
+            display: block;
+            text-align: center;
+            background: #0066ff;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: #0052cc; }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🤖 Robot Financiero</h1>
+        <p>Herramientas y software recomendados para optimizar tu negocio digital</p>
+    </header>
+
+    <div class="container">
+        <div class="card-grid">
+
+            <div class="card">
+                <div>
+                    <span class="tag">E-commerce & Tiendas Online</span>
+                    <h3>Shopify</h3>
+                    <p>La plataforma líder mundial para crear tiendas online, vender productos y gestionar tu comercio digital fácilmente.</p>
+                </div>
+                <div>
+                    <div class="price">Prueba gratis</div>
+                    <a href="https://shopify.pxf.io/c/7568707/2784851/13624" target="_blank" class="btn">Probar Shopify</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="tag">Hosting & Dominios</span>
+                    <h3>Hostinger</h3>
+                    <p>Alojamiento web rápido, económico y fiable para lanzar tus proyectos en WordPress o páginas personalizadas.</p>
+                </div>
+                <div>
+                    <div class="price">Desde 2,99€/mes</div>
+                    <a href="https://shopify.pxf.io/c/7568707/2784851/13624" target="_blank" class="btn">Probar Hostinger</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="tag">Email Marketing</span>
+                    <h3>Brevo</h3>
+                    <p>Plataforma completa para automatización de correo electrónico, campañas de marketing y gestión de clientes (CRM).</p>
+                </div>
+                <div>
+                    <div class="price">Plan gratuito disponible</div>
+                    <a href="https://shopify.pxf.io/c/7568707/2784851/13624" target="_blank" class="btn">Probar Brevo</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Última actualización automática: 05/08/2026</p>
+        <p>&copy; 2026 Robot Financiero. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
