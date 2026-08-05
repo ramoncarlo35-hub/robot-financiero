@@ -1,112 +1,156 @@
 import os
+import datetime
 
-# Crear la carpeta donde se guardará la web
-os.makedirs("public", exist_ok=True)
-
-def obtener_herramientas():
-    """
-    Catálogo de Herramientas Digitales y Hosting.
-    Aquí irás cambiando las URL de 'enlace' por tus enlaces de afiliado a medida que te des de alta.
-    """
-    return [
+def generar_html():
+    fecha_actual = datetime.datetime.now().strftime("%d/%m/%Y")
+    
+    herramientas = [
         {
-            "categoria": "🌐 Hosting & Web",
-            "titulo": "Hostinger - Plan Web Premium",
-            "descripcion": "Ideal para crear webs rápidas con dominio gratis y soporte 24/7.",
-            "descuento": "75% DTO",
-            "precio_desde": "2.99€ / mes",
-            "enlace": "https://www.hostinger.es"
+            "nombre": "Shopify",
+            "descripcion": "La plataforma líder mundial para crear tiendas online, vender productos y gestionar tu comercio digital fácilmente.",
+            "categoria": "E-commerce & Tiendas Online",
+            "precio": "Prueba gratis",
+            "enlace": "https://shopify.pxf.io/c/7568707/2784851/13624"
         },
         {
-            "categoria": "🔒 Seguridad & Privacidad",
-            "titulo": "NordVPN - Protección Total",
-            "descripcion": "Navegación segura, ultra rápida y acceso a contenido global sin límites.",
-            "descuento": "68% DTO + 3 Meses Gratis",
-            "precio_desde": "3.09€ / mes",
-            "enlace": "https://nordvpn.com"
+            "nombre": "Hostinger",
+            "descripcion": "Alojamiento web rápido, económico y fiable para lanzar tus proyectos en WordPress o páginas personalizadas.",
+            "categoria": "Hosting & Dominios",
+            "precio": "Desde 2,99€/mes",
+            "enlace": "https://shopify.pxf.io/c/7568707/2784851/13624"
         },
         {
-            "categoria": "🤖 Inteligencia Artificial & Contenidos",
-            "titulo": "Notion AI - Productividad con IA",
-            "descripcion": "Organiza tus tareas, redacta contenido y gestiona proyectos en un solo lugar.",
-            "descuento": "Prueba Gratuita",
-            "precio_desde": "0.00€",
-            "enlace": "https://www.notion.so"
-        },
-        {
-            "categoria": "📈 Email Marketing & Automatización",
-            "titulo": "Brevo (Sendinblue) - Envíos Masivos",
-            "descripcion": "Plataforma líder para automatizar correos y newsletters para tus clientes.",
-            "descuento": "Plan Gratis 300 emails/día",
-            "precio_desde": "0.00€",
-            "enlace": "https://www.brevo.com"
+            "nombre": "Brevo",
+            "descripcion": "Plataforma completa para automatización de correo electrónico, campañas de marketing y gestión de clientes (CRM).",
+            "categoria": "Email Marketing",
+            "precio": "Plan gratuito disponible",
+            "enlace": "https://shopify.pxf.io/c/7568707/2784851/13624"
         }
     ]
 
-def generar_web(herramientas):
-    html = """<!DOCTYPE html>
+    html_content = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="impact-site-verification" value="3a6b3c82-b17f-4a8f-b0b9-50c3b323ee62">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robot Financiero - Herramientas Digitales & Software</title>
+    <title>Robot Financiero - Directorio de Herramientas Digitales</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; color: #2c3e50; }
-        .container { max-width: 900px; margin: 0 auto; }
-        .header { text-align: center; padding: 30px 20px; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .header h1 { margin: 0 0 10px 0; font-size: 2.2em; }
-        .header p { margin: 0; opacity: 0.9; font-size: 1.1em; }
-        .card { background: white; border-radius: 12px; padding: 22px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; gap: 20px; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-3px); }
-        .badge { background-color: #e8f5e9; color: #2e7d32; font-size: 0.85em; font-weight: bold; padding: 4px 10px; border-radius: 20px; display: inline-block; margin-bottom: 8px; }
-        .card-info h3 { margin: 5px 0 8px 0; color: #1a2a3a; font-size: 1.3em; }
-        .card-info p { margin: 0 0 12px 0; color: #666; font-size: 0.95em; line-height: 1.4; }
-        .price-box { font-size: 1.1em; font-weight: bold; color: #d32f2f; }
-        .discount { background: #ffebee; color: #c62828; padding: 3px 8px; border-radius: 5px; font-size: 0.85em; margin-right: 8px; }
-        .btn { background: #0066ff; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; whitespace: nowrap; transition: background 0.2s; }
-        .btn:hover { background: #0052cc; }
-        @media (max-width: 600px) {
-            .card { flex-direction: column; align-items: flex-start; }
-            .btn { width: 100%; box-sizing: border-box; }
-        }
+        body {{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
+        }}
+        header {{
+            background: linear-gradient(135deg, #0066ff, #00cc99);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }}
+        header h1 {{ margin: 0; font-size: 2.5em; }}
+        header p {{ margin-top: 10px; font-size: 1.1em; opacity: 0.9; }}
+        .container {{
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }}
+        .card-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }}
+        .card {{
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }}
+        .card:hover {{
+            transform: translateY(-5px);
+        }}
+        .tag {{
+            background: #eef2ff;
+            color: #4f46e5;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+            width: fit-content;
+        }}
+        .card h3 {{ margin: 0 0 10px 0; color: #111; }}
+        .card p {{ color: #666; font-size: 0.95em; line-height: 1.5; }}
+        .price {{ font-weight: bold; color: #10b981; margin: 15px 0; }}
+        .btn {{
+            display: block;
+            text-align: center;
+            background: #0066ff;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }}
+        .btn:hover {{ background: #0052cc; }}
+        footer {{
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }}
     </style>
 </head>
 <body>
+
+    <header>
+        <h1>🤖 Robot Financiero</h1>
+        <p>Herramientas y software recomendados para optimizar tu negocio digital</p>
+    </header>
+
     <div class="container">
-        <div class="header">
-            <h1>🚀 Robot Financiero: Software & SaaS</h1>
-            <p>Selección autómata de las mejores herramientas digitales y licencias en oferta</p>
-        </div>
-    """
-    
+        <div class="card-grid">
+"""
+
     for item in herramientas:
-        html += f"""
-        <div class="card">
-            <div class="card-info">
-                <span class="badge">{item['categoria']}</span>
-                <h3>{item['titulo']}</h3>
-                <p>{item['descripcion']}</p>
-                <div class="price-box">
-                    <span class="discount">{item['descuento']}</span>
-                    <span>Desde {item['precio_desde']}</span>
+        html_content += f"""
+            <div class="card">
+                <div>
+                    <span class="tag">{item['categoria']}</span>
+                    <h3>{item['nombre']}</h3>
+                    <p>{item['descripcion']}</p>
+                </div>
+                <div>
+                    <div class="price">{item['precio']}</div>
+                    <a href="{item['enlace']}" target="_blank" class="btn">Probar {item['nombre']}</a>
                 </div>
             </div>
-            <a href="{item['enlace']}" class="btn" target="_blank" rel="noopener">Obtener Oferta ➔</a>
+"""
+
+    html_content += f"""
         </div>
-        """
-        
-    html += """
     </div>
+
+    <footer>
+        <p>Última actualización automática: {fecha_actual}</p>
+        <p>&copy; {datetime.datetime.now().year} Robot Financiero. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
-    """
+"""
+
+    with open("index.html", "w", encoding="utf-8") as f:
+        f.write(html_content)
     
-    with open("public/index.html", "w", encoding="utf-8") as f:
-        f.write(html)
+    print("¡Página web generada con éxito en index.html!")
 
 if __name__ == "__main__":
-    print("Robot Financiero: Actualizando portal de Software...")
-    datos = obtener_herramientas()
-    generar_web(datos)
-    print("¡Portal de herramientas publicado con éxito!")
+    generar_html()
