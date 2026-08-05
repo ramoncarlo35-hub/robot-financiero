@@ -1,4 +1,4 @@
-Python
+
 import os
 
 # Crear la carpeta donde se guardará la web
