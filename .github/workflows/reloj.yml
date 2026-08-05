@@ -2,32 +2,29 @@ name: Ejecucion Automata del Robot
 
 on:
   schedule:
-    # Se ejecuta solo cada 6 horas
-    - cron: '0 */6 * * *'
-  # Permite ejecutarlo a mano cuando queramos probarlo
+    - cron: '0 8 * * *'
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   ejecutar-robot:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Descargar codigo
-        uses: actions/checkout@v4
+      - name: Descargar el codigo
+        uses: actions/checkout@v3
 
       - name: Configurar Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.x'
 
-      - name: Ejecutar el Robot Financiero
+      - name: Ejecutar el script principal
         run: python main.py
 
-      - name: Publicar la Web en GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+      - name: Guardar y subir cambios a GitHub
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Web actualizada automaticamente" || exit 0
+          git push
+     
