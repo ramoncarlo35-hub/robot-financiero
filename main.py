@@ -6,6 +6,13 @@ def generar_html():
     
     herramientas = [
         {
+            "nombre": "VEVOR España",
+            "descripcion": "Maquinaria profesional, herramientas de taller y equipamiento industrial con envío rápido y grandes descuentos.",
+            "categoria": "Herramientas & Bricolaje",
+            "precio": "Ofertas exclusivas",
+            "enlace": "https://vevores.sjv.io/c/7568707/3812783/22819"
+        },
+        {
             "nombre": "Shopify",
             "descripcion": "La plataforma líder mundial para crear tiendas online, vender productos y gestionar tu comercio digital fácilmente.",
             "categoria": "E-commerce & Tiendas Online",
@@ -61,7 +68,7 @@ def generar_html():
            "precio": "Alta rentabilidad",
            "enlace": "https://flashcloud.pxf.io/c/7568707/3920665/52759"
         }
-        ]
+    ]
 
     html_content = f"""<!DOCTYPE html>
 <html lang="es">
