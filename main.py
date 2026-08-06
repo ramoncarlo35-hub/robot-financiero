@@ -193,10 +193,16 @@ def generar_html():
 </html>
 """
 
-    with open("index.html", "w", encoding="utf-8") as f:
+    # Crear la carpeta public si no existe y guardar el HTML dentro
+    os.makedirs("public", exist_ok=True)
+    with open("public/index.html", "w", encoding="utf-8") as f:
         f.write(html_content)
     
-    print("¡Página web generada con éxito en index.html con todas las marcas!")
+    # También se guarda en la raíz por compatibilidad
+    with open("index.html", "w", encoding="utf-8") as f:
+        f.write(html_content)
+
+    print("¡Página web generada con éxito en public/index.html con todas las marcas!")
 
 if __name__ == "__main__":
     generar_html()
