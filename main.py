@@ -13,6 +13,13 @@ def generar_html():
             "enlace": "https://vevores.sjv.io/c/7568707/3812783/22819"
         },
         {
+            "nombre": "GearUP Booster",
+            "descripcion": "Optimizador de red inteligente diseñado para reducir el lag, mejorar la latencia y acelerar tus conexiones.",
+            "categoria": "Software & Optimización",
+            "precio": "Prueba gratuita",
+            "enlace": "https://gearupapp.pxf.io/c/7568707/3931548/53368"
+        },
+        {
             "nombre": "Shopify",
             "descripcion": "La plataforma líder mundial para crear tiendas online, vender productos y gestionar tu comercio digital fácilmente.",
             "categoria": "E-commerce & Tiendas Online",
