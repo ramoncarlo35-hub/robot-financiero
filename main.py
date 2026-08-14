@@ -20,6 +20,13 @@ def generar_html():
             "enlace": "https://gearupapp.pxf.io/c/7568707/3931548/53368"
         },
         {
+            "nombre": "JMGO",
+            "descripcion": "Proyectores inteligentes de alta gama y tecnología láser para entretenimiento en casa, cine y presentaciones profesionales.",
+            "categoria": "Hardware & Imagen",
+            "precio": "Proyectores Premium",
+            "enlace": "https://affiliate.jmgo.com/c/7568707/3979115/53581"
+        },
+        {
             "nombre": "Shopify",
             "descripcion": "La plataforma líder mundial para crear tiendas online, vender productos y gestionar tu comercio digital fácilmente.",
             "categoria": "E-commerce & Tiendas Online",
@@ -200,16 +207,14 @@ def generar_html():
 </html>
 """
 
-    # Crear la carpeta public si no existe y guardar el HTML dentro
     os.makedirs("public", exist_ok=True)
     with open("public/index.html", "w", encoding="utf-8") as f:
         f.write(html_content)
     
-    # También se guarda en la raíz por compatibilidad
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(html_content)
 
-    print("¡Página web generada con éxito en public/index.html con todas las marcas!")
+    print("¡Página web generada con éxito!")
 
 if __name__ == "__main__":
     generar_html()
